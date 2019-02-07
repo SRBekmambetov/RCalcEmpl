@@ -1,3 +1,5 @@
+package ru.tsc.srb.calcempl;
+
 import java.math.BigDecimal;
 
 public class Employee {
