@@ -104,7 +104,7 @@ public class Organization {
         printTransfersEmployees(department1, department2);
     }
 
-    public static void printTransfersEmployees(Department department1, Department department2) {
+    private static void printTransfersEmployees(Department department1, Department department2) {
         if (!transfersEmployeesList.isEmpty()) {
             System.out.println("Transfers emloyees:");
             System.out.println(department1.getName() + " --> " + department2.getName());
@@ -120,7 +120,7 @@ public class Organization {
         }
     }
 
-    public static void calcAverageSalaryFromList(List<List<Employee>> subsetResult, BigDecimal initialAverageAmount1, BigDecimal initialAverageAmount2) {
+    private static void calcAverageSalaryFromList(List<List<Employee>> subsetResult, BigDecimal initialAverageAmount1, BigDecimal initialAverageAmount2) {
         for (List<Employee> employeesList: subsetResult) {
             BigDecimal sumSalary = new BigDecimal(0);
             for (Employee employee: employeesList) {
@@ -134,7 +134,7 @@ public class Organization {
         }
     }
 
-    public static List<List<Employee>> getSubsets(List<Employee> input, int k) {
+    private static List<List<Employee>> getSubsets(List<Employee> input, int k) {
         List<List<Employee>> subsets = new ArrayList<>();
         int[] s = new int[k];               //Здесь мы будем хранить индексы
         if (k <= input.size()) {
@@ -160,7 +160,7 @@ public class Organization {
     }
 
     // Генерируем подмножество по порядку индекса
-    public static List<Employee> getSubset(List<Employee> input, int[] subset) {
+    private static List<Employee> getSubset(List<Employee> input, int[] subset) {
         List<Employee> result = new ArrayList<>(subset.length);
         for (int s : subset) {
             result.add(input.get(s));
