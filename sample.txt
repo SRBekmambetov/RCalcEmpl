@@ -1,0 +1,6 @@
+Aleksey|Vavilov|Leonidovich|1|Riski|1000
+Oleg|Mironov|Fedorovich|2|Zadolzhennosti|100
+Vasiliy|Ivanov|Stepanovich|1|Riski|150
+Adnrey|Khahov|Aleksandrovich|1|Riski|100
+Valeriy|Petrov|Mihailovich|2|Zadolzhennosti|70
+Maksim|Bokov|Andreevich|2|Zadolzhennosti|80
