@@ -1,6 +1,6 @@
-Aleksey|Vavilov|Leonidovich|1|Riski|1000
-Oleg|Mironov|Fedorovich|2|Zadolzhennosti|100
-Vasiliy|Ivanov|Stepanovich|1|Riski|150
-Adnrey|Khahov|Aleksandrovich|1|Riski|100
-Valeriy|Petrov|Mihailovich|2|Zadolzhennosti|70
-Maksim|Bokov|Andreevich|2|Zadolzhennosti|80
+Aleksey|Vavilov|Leonidovich|1|Riski|345534
+Oleg|Mironov|Fedorovich|2|Dolgi|654554
+Vasiliy|Ivanov|Stepanovich|1|Riski|984574
+Adnrey|Khahov|Alekseevich|1|Riski|875848
+Valeriy|Petrov|Mihailovich|2|Dolgi|847574
+Maksim|Bokov|Andreevich|2|Dolgi|233234

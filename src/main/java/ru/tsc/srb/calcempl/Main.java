@@ -6,12 +6,16 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
-        Organization organization = new Organization();
-        String nameFile = args[0];
+        if (args.length != 3) {
+            System.out.println("Некорректно введены параметры на вход");
+            return;
+        }
+        String fileName = args[0];
         int idDepartment1 = Integer.parseInt(args[1]);
         int idDepartment2 = Integer.parseInt(args[2]);
+        Organization organization = new Organization();
         try {
-            organization.readFile(nameFile);
+            organization.createEmployeeFromFile(fileName);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
             return;
@@ -19,14 +23,14 @@ public class Main {
             System.out.println("Файл не доступен для чтения");
             return;
         } catch (NumberFormatException e) {
-            System.out.println("Сумма введена неверно");
+            System.out.println("Зарплата введена неверно");
             return;
         }
         organization.printDepartmentsInfo();
         organization.printAverageSalaryDepartments();
         try {
             organization.calcAndPrintTransfersEmployees(idDepartment1, idDepartment2);
-        } catch (Exception e) {
+        } catch (IdNotFoundException e) {
             System.out.println("Отдел не найден");
             return;
         }
