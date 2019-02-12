@@ -103,8 +103,7 @@ public class Organization {
         BigDecimal initialAverageAmount1 = department1.calcAverageSalaryDepartments(department1);
         BigDecimal initialAverageAmount2 = department2.calcAverageSalaryDepartments(department2);
         addSubset(department1.getEmployeesList().size() - 1);
-        List<List<Employee>> subsetResult = new ArrayList<>();
-        createASubsetOfEmployees(subsetResult, department1.getEmployeesList());
+        List<List<Employee>> subsetResult = createASubsetOfEmployees(department1.getEmployeesList());
         calcAverageSalaryFromList(subsetResult, initialAverageAmount1, initialAverageAmount2);
         printTransfersEmployees(department1, department2);
     }
@@ -158,12 +157,14 @@ public class Organization {
         }
     }
 
-    private void createASubsetOfEmployees(List<List<Employee>> subsetResult, List<Employee> employeeList) {
+    private List<List<Employee>> createASubsetOfEmployees(List<Employee> employeeList) {
+        List<List<Employee>> subsetResult = new ArrayList<>();
         for (int i = 0; i < combinationIndexesList.size(); i++) {
             subsetResult.add(new ArrayList<>());
             for (int j = 0; j < combinationIndexesList.get(i).size(); j++) {
                 subsetResult.get(i).add(employeeList.get(combinationIndexesList.get(i).get(j)));
             }
         }
+        return subsetResult;
     }
 }
