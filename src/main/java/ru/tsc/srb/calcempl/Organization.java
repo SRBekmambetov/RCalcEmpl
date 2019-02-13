@@ -23,7 +23,7 @@ public class Organization {
 
     public void createEmployeeFromFile(String fileName) throws IOException, NumberFormatException {
         File file = new File(fileName);
-        FileReader fileReader = new FileReader(fileName);
+        FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
         String line = "";
         int z = 1;
